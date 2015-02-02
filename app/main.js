@@ -16,13 +16,13 @@ mainMod.config(function($routeProvider, $locationProvider){
     });
     
     $routeProvider.when('/read',{
-        //controller:'mainController',
-        templateUrl:'read.html'
+        controller:'ReadController',
+        templateUrl:'lue.html'
     });
     
     $routeProvider.when('/write',{
-        //controller:'mainController',
-        templateUrl:'write.html'
+        controller:'WriteController',
+        templateUrl:'kirjoita.html'
     });
     
     /*$routeProvider.when('/add',{
@@ -36,11 +36,17 @@ mainMod.config(function($routeProvider, $locationProvider){
 //------------------------------------------------------------------------------------------------
 
 //Thisis one syntax to create a controller, but might get broken is this is minified
-mainMod.controller('productController', function($scope,$location,productFactory,$route){ //use the 'productFactory in this controller
+mainMod.controller('ReadController', function($scope,$location,productFactory,$route){ //use the 'productFactory in this controller
 
-    //That's the 'next' function called from 'products.html'
-    $scope.next = function(){
-        $location.path('/add');
+$scope.isActive = function (viewLocation) {
+     var active = (viewLocation === $location.path());
+     return active;
+};    
+    
+    //That's the 'read()' function called from 'index.html'
+    $scope.read = function(){
+        console.log("readissa ollaan");
+        $location.path('/read');
     }
     
     $scope.deleteProduct = function(index){
@@ -76,7 +82,7 @@ mainMod.controller('productController', function($scope,$location,productFactory
 // The minifier wont brake the code if you use this syntax
 //------------------------------------------------------------------------------------------------
 
-mainMod.controller('UserProduct',['$scope','productFactory','$location',function($scope,productFactory,$location){
+mainMod.controller('WriteController',['$scope','productFactory','$location',function($scope,productFactory,$location){
     
     // Deine your scope atributes always in object literal
     // See more: https://github.com/angular/angular.js/wiki/Understanding-Scopes
