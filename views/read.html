@@ -1,0 +1,36 @@
+<div class="container theme-showcase" role="main">
+    <br><br><br>
+    <div class="page-header">
+        <h1>Read reviews</h1>
+    </div>
+    <div>
+        <!--p ng-show='products.length === 0'>There are no products. Please add some product!</p-->
+        <table class='table table-striped'> <!--ng-show='products.length > 0'-->
+            <thread>
+                <tr>
+                    <th>#</th>
+                    <th>Type</th>
+                    <th>Product</th>
+                    <th>Purchased from</th>
+                    <th>Purchase date</th>
+                    <th>Rate</th>
+                    <th>Opinion</th>
+                    <th>Action</th>
+                </tr>
+            </thread>
+            <tbody>
+                <!--check if there are still products left-->
+                <tr ng-repeat='product in products'>
+                    <td>{{product.name}}</td>
+                    <td>{{product.price}}</td>
+                    <td><button ng-click='deleteProduct($index)'>Delete</button></td>
+                    <td><button ng-click='updateProduct($index)'>Update</button></td>
+                    <td></td>
+                    <td></td>
+                    <td><img src="../images/update.png" ng-click="updateProduct($index)"></td>
+                    <td><img src="../images/delete.png" ng-click="deleteProduct($index)"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
