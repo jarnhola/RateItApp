@@ -21,15 +21,18 @@
             <tbody>
                 <!--check if there are still products left-->
                 <tr ng-repeat='product in products'>
-                    <td>{{product.name}}</td>
-                    <td>{{product.price}}</td>
-                    <td><button ng-click='deleteProduct($index)'>Delete</button></td>
-                    <td><button ng-click='updateProduct($index)'>Update</button></td>
-                    <td></td>
-                    <td></td>
-                    <td><img src="../images/update.png" ng-click="updateProduct($index)"></td>
-                    <td><img src="../images/delete.png" ng-click="deleteProduct($index)"></td>
-                </tr>
+                    <td>{{$index+1}}</td>
+                    <td>{{product.type}}</td>
+                    <td>{{product.item}}</td>
+                    <td>{{product.from}}</td>
+                    <td>{{product.date}}</td>
+                    <td>{{product.rate}}</td>
+                    <td>{{product.opinion}}</td>
+                    <td>
+                        <img src="../images/update.png" ng-click="updateProduct($index)" width="15">
+                        <img src="../images/delete.png" ng-click="deleteProduct($index)" width="15">
+                    </td2
+                </tr2
             </tbody>
         </table>
     </div>

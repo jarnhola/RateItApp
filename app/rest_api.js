@@ -6,6 +6,15 @@ var router = express.Router();
 
 var dummy=[];
 
+router.get('/types',function(req,res){
+    
+    var productTypes = {
+        types:['Ale','Lager','Souts & Porters','Malt']
+    }
+    res.send(productTypes);
+    
+});
+
 router.get('/',function(req,res){
 
     res.send(dummy);
@@ -19,6 +28,7 @@ router.post('/',function(req,res){
 
 router.put('/',function(req,res){
     
+    dummy.put
 });
 
 router.delete('/',function(req,res){

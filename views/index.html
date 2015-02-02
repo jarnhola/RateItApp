@@ -32,9 +32,9 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li ng-class="{ active: isActive('/')}"><a href="/">Home</a></li>
-                <li ng-class="{ active: isActive('/read')}"><a href="read">Read</a></li>
-                <li ng-class="{ active: isActive('/write')}"><a href="write">Write</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="read">Read</a></li> <!-- ng-click="read()"-->
+                <li><a href="write">Write</a></li> <!-- ng-click="write()"-->
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">More <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
@@ -63,8 +63,11 @@
         <script src="../angular/angular.js"></script>
         <script src="../angular/angular-route.js"></script>
         <script src="../angular/angular-resource.js"></script>
-        <!-- main.js -->
+        <!-- own files -->
         <script src="../app/main.js"></script>
+        <script src="../controllers/read_controller.js"></script>
+        <script src="../controllers/write_controller.js"></script>
+        <script src="../factory/product_factory.js"></script>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <!-- Latest compiled and minified JavaScript -->
