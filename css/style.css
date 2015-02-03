@@ -1,3 +1,7 @@
+.main {
+    margin-top: 70px;
+}
+
 #logo {
     width: 300px;
     float: right;
@@ -5,7 +9,6 @@
 
 .jumbotron {
   padding: 30px 15px;
-  margin-top: 70px;
   margin-bottom: 30px;
   color: #ffffff; /*inherit;*/
   background-color: #ba1111; /*#ddd6ff;*/
