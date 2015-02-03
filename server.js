@@ -1,7 +1,9 @@
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
-var rest = require('./app/rest_api.js');
+var db = require('./database');
+var queries = require('./queries');
+var rest = require('./app/rest_api');
 var server = express();
 
 //Use bodyparser middleware

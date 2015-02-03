@@ -1,5 +1,4 @@
 var express = require('express');
-
 var router = express.Router();
 
 //Following are REST app methods/routes
@@ -9,7 +8,7 @@ var dummy=[];
 router.get('/types',function(req,res){
     
     var productTypes = {
-        types:['Ale','Lager','Souts & Porters','Malt']
+        types:['Kulkuneuvo','Elintarvike','Kodintarvike','Ravintola']
     }
     res.send(productTypes);
     
@@ -19,11 +18,15 @@ router.get('/',function(req,res){
 
     res.send(dummy);
 });
-
+/*
 router.post('/',function(req,res){
     
     dummy.push(req.body);
     res.send('Added to server array');
+});*/
+
+router.post('/',function(req,res){
+    req.queries.addReview(req,res);
 });
 
 router.put('/',function(req,res){
