@@ -1,3 +1,9 @@
+.dropdown-menu > li > a:focus {
+  color: #262626;
+  text-decoration: none;
+  background-color: red;
+}
+
 .main {
     margin-top: 70px;
 }

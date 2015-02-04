@@ -13,11 +13,16 @@ router.get('/types',function(req,res){
     res.send(productTypes);
     
 });
-
+/*
 router.get('/',function(req,res){
 
     res.send(dummy);
+});*/
+
+router.get('/',function(req,res){
+    req.queries.getReviews(req,res);
 });
+
 /*
 router.post('/',function(req,res){
     

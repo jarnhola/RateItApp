@@ -22,3 +22,23 @@ module.exports.addReview = function(req,res){
         }
     });
 }
+
+module.exports.getReviews = function(req,res){
+    
+    db.find({},function(err,data){
+        
+        if(err){
+            console.log('error fetching user data');
+            res.send('error');
+        }
+        else{
+            console.log(data);
+            res.send({products:data});
+        }
+    });
+    /*
+    db.find({}).exec(function(err,data){
+        console.log("res.send({products:data})");
+        res.send({products:data});
+    });*/
+}

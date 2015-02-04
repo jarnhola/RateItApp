@@ -10,7 +10,12 @@ mainMod.factory('productFactory',['$http','$q','$resource', function($http,$q,$r
 
 //-------------------------------------------- GET ---------------------------------------------- 
     
-    factory.getProducts = function(scope){
+    factory.getProducts = function(){
+        
+        return $resource('/data').get().$promise;
+    }    
+    /*
+    factory.getProducts = function(){
     
         var deferred = $q.defer();
         factory.promise = deferred.promise;
@@ -24,7 +29,7 @@ mainMod.factory('productFactory',['$http','$q','$resource', function($http,$q,$r
             });
         
         return deferred.promise;
-    }
+    }*/
 
 //-------------------------------------------- POST ---------------------------------------------    
     

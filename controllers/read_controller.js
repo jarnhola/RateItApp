@@ -2,7 +2,7 @@
 // Read Controller
 //------------------------------------------------------------------------------------------------
 
-//Thisis one syntax to create a controller, but might get broken is this is minified
+//This is one syntax to create a controller, but might get broken is this is minified
 mainMod.controller('ReadController', function($scope,$location,productFactory,$route){ //use the 'productFactory in this controller
 
     $scope.deleteProduct = function(index){
@@ -24,8 +24,9 @@ mainMod.controller('ReadController', function($scope,$location,productFactory,$r
     }    
     
     //wait here that we get response from server
+    //productFactory.getProducts().then(function(data){
     productFactory.getProducts().then(function(data){
-        $scope.products = data;
+        $scope.products = data.products;
     });
     
 });
