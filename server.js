@@ -11,7 +11,9 @@ server.use(bodyParser.json());
 
 //this function is executed for every request!
 server.use(function(req,res,next){
-    console.log(req.path);
+    //Store queries object to request
+    req.queries = queries;
+    //Pass to next middleware
     next();
 });
 

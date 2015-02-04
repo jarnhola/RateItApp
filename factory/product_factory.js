@@ -2,7 +2,7 @@
 // Product Factory
 //------------------------------------------------------------------------------------------------
 
-mainMod.factory('productFactory', function($http,$q,$resource){
+mainMod.factory('productFactory',['$http','$q','$resource', function($http,$q,$resource){
     
     //use $http service in this factory / use also $q -service https://docs.angularjs.org/api/ng/service/$q
     
@@ -50,4 +50,4 @@ mainMod.factory('productFactory', function($http,$q,$resource){
     
     
     return factory;
-});
+}]);
